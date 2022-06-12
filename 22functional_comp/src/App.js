@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Card from './Card';
-import faker from 'faker'
+import { faker } from '@faker-js/faker'
 function App() {
   const buttonsMarkup = (
     <div>
@@ -12,25 +12,23 @@ function App() {
   return (
     <div className="App">
       <Card
-        avatar={faker.image.avatar()}
+        avatar={faker.image.people()}
         name={`${faker.name.firstName()} ${faker.name.firstName()}`}
         title={faker.name.jobTitle()}
       >{buttonsMarkup}
       </Card>
       <Card
-        avatar={faker.image.avatar()}
+        avatar={faker.image.people()}
         name={`${faker.name.firstName()} ${faker.name.firstName()}`}
         title={faker.name.jobTitle()}
       >{buttonsMarkup}
       </Card>
       <Card
-        avatar={faker.image.avatar()}
+        avatar={faker.image.people()}
         name={`${faker.name.firstName()} ${faker.name.firstName()}`}
         title={faker.name.jobTitle()}
       >{buttonsMarkup}
       </Card>
-
-
     </div>
   );
 }
